@@ -79,9 +79,11 @@ function getJobCon(p, tp) { //搜索器函数
                 break;
             case "社招":
                 conbox(data, '#jobarea2', '#coid2')
+                getJobList(params, $('.zwlist2'), '社招')
                 break;
             case "实习生":
                 conbox(data, '#jobarea3', '#coid3')
+                  getJobList(params, $('.zwlist3'), '实习生')
                 break;
         }
 
@@ -274,7 +276,7 @@ function search(area, divid, box, tp) {
         history.pushState(null, '', url.href);
 
 
-        switch (tp) {
+        switch (tptp) {
             case '校招':
                 // let url = window.location.href
                 // window.history.pushState({}, 0, url.split('?')[0] + '?coid=' + params.coid);

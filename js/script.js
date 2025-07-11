@@ -79,6 +79,7 @@
 			var url = new URL(window.location.href);
 			const sps = new URLSearchParams($(location).attr('search'))
 			sps.set('slideTo', idx)
+			// console.log("sps", sps);
 			sps.set('rand', Math.random(0, 1) * 100000)
 			url.search = sps.toString();
 			history.pushState(null, '', url.href);
